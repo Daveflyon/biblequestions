@@ -415,6 +415,20 @@ tbody td.lc { background: #f2f2f2; font-weight: 700; }
 }
 .tally-placeholder strong { display: block; color: #1F3864; font-size: 15px; margin-bottom: 6px; }
 
+/* ---- "There's more" signposts (home page) ---- */
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.section-head h2 { margin: 0; }
+.see-all { font-size: 14px; font-weight: 700; color: #1F3864; white-space: nowrap; }
+.more-questions { text-align: center; margin: 8px 0 48px; }
+.more-questions p { color: #555; font-size: 14px; margin: 0 0 12px; }
+.more-questions .btn { min-height: 44px; padding: 12px 24px; }
+
 /* ---- Section divider ---- */
 .section-divider {
   border: none;
