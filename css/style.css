@@ -36,19 +36,26 @@ a:hover, a:focus { color: #2c54a0; }
 *:focus { outline: 2px solid #2c54a0; outline-offset: 2px; }
 
 /* ---- Site header ---- */
+/* Mobile first: on phones the logo sits above the menu and the bar scrolls away; from 640px it is one sticky row */
 .site-header {
   background: #1F3864;
   padding: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 .site-header .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  gap: 6px 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (min-width: 640px) {
+  .site-header { position: sticky; top: 0; }
+  .site-header .container { flex-wrap: nowrap; height: 56px; padding-top: 0; padding-bottom: 0; }
 }
 .site-logo {
   font-size: 18px;
@@ -63,7 +70,7 @@ a:hover, a:focus { color: #2c54a0; }
 }
 .site-logo:hover, .site-logo:focus { color: #ffffff; text-decoration: none; }
 
-.site-nav { display: flex; gap: 4px; align-items: center; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
 .site-nav a {
   color: #c8d6f0;
   text-decoration: none;
@@ -290,6 +297,7 @@ tbody td.lc { background: #f2f2f2; font-weight: 700; }
   flex-direction: column;
   justify-content: center;
 }
+.featured-card-right .tag { align-self: flex-start; }
 .featured-excerpt {
   font-size: 15px;
   color: #1c1c1e;

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is the kingdom of heaven? | The Open Question</title>
+<meta name="description" content="What the Bible says about the kingdom of heaven: God's rule come near in Jesus, open to all who turn and trust and one day filling the earth.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* Page styles, mobile first: phone layout is the default, wider screens build on it */
+  h2, h3, .question-box, .core-truth-box { scroll-margin-top: 72px; }
+  .sc { font-variant: small-caps; }
+  .lbl {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; margin: 0 0 8px;
+  }
+  blockquote .poem { display: block; }
+
+  /* Core truth */
+  .core-truth-box {
+    background: #1F3864; border-radius: 4px; padding: 20px 18px;
+    margin: 24px 0; text-align: center;
+  }
+  .core-truth-box .lbl { color: #f0b429; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .core-truth-box p:last-child { font-size: 17px; font-weight: 700; color: #ffffff; line-height: 1.45; margin: 0; }
+
+  /* Two views, equal weight: stacked on phones, side by side on wider screens */
+  .views { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 16px 0; }
+  .view { border: 1px solid #cccccc; border-top: 4px solid #1F3864; border-radius: 4px; padding: 14px 16px; }
+  .view .lbl { color: #1F3864; }
+  .view p:last-child { margin-bottom: 0; }
+
+  /* Callouts */
+  .callout { padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout.note { border-left: 4px solid #d97706; background: #fffbf0; }
+  .callout.note .lbl { color: #d97706; }
+  .callout.depth { border-left: 4px solid #1F3864; background: #eef2f8; }
+  .callout.depth .lbl { color: #1F3864; }
+  .callout.tip { border-left: 4px solid #276221; background: #f0f7f0; }
+  .callout.tip .lbl { color: #276221; }
+  .callout.caution { border-left: 4px solid #8b0000; background: #fce8e8; }
+  .callout.caution .lbl { color: #8b0000; }
+
+  /* Tables: cards on phones, full tables from 640px */
+  .stack table, .stack tbody, .stack tr, .stack td { display: block; width: 100%; }
+  .stack thead { display: none; }
+  .stack tbody tr {
+    margin-bottom: 14px; border: 1px solid #cccccc; border-radius: 4px;
+    overflow: hidden; background: #ffffff;
+  }
+  .stack tbody td { border: none; border-bottom: 1px solid #eeeeee; }
+  .stack tbody td:last-child { border-bottom: none; }
+  .stack tbody td::before {
+    content: attr(data-label); display: block; font-weight: 700; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: #1F3864; margin-bottom: 4px;
+  }
+  .stack tbody td.lc::before { display: none; }
+
+  .enter-list li, .reflection-list li { margin-bottom: 8px; }
+  .reflection-ref { color: #555; font-size: 13px; }
+
+  /* Floating table of contents (Bible Truth Foundations button) */
+  .toc-container {
+    position: fixed;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    z-index: 1000;
+  }
+  .toc-btn {
+    background: #1F3864; color: #ffffff; border: none; border-radius: 4px;
+    padding: 10px 16px; font-size: 13px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer; display: block; width: 100%; text-align: left; min-height: 44px; white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  .toc-btn:hover { background: #2c54a0; }
+  .toc-btn:focus { outline: 2px solid #f0b429; outline-offset: 2px; }
+  .toc-menu {
+    display: none; background: #1F3864; border-radius: 4px 4px 0 0; padding: 8px 0;
+    margin-bottom: 4px; max-height: 60vh; overflow-y: auto; min-width: 220px;
+  }
+  .toc-menu.open { display: block; }
+  .toc-menu a { display: block; padding: 10px 16px; color: #ffffff; text-decoration: none; font-size: 14px; }
+  .toc-menu a:hover, .toc-menu a:focus { background: #2c54a0; outline: none; }
+  .toc-menu .toc-back-top { border-top: 1px solid rgba(255, 255, 255, 0.15); font-weight: 700; }
+  .site-footer { padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+
+  @media (min-width: 640px) {
+    .core-truth-box { padding: 24px 28px; }
+    .core-truth-box p:last-child { font-size: 19px; }
+    .views { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .callout { padding: 14px 18px; }
+    .stack table { display: table; }
+    .stack thead { display: table-header-group; }
+    .stack tbody { display: table-row-group; }
+    .stack tr, .stack tbody tr { display: table-row; margin: 0; border: none; border-radius: 0; }
+    .stack td, .stack tbody td { display: table-cell; width: auto; border: 1px solid #cccccc; }
+    .stack tbody td::before { display: none; }
+    .stack td.lc { width: 20%; }
+    .toc-container { bottom: calc(24px + env(safe-area-inset-bottom, 0px)); right: calc(24px + env(safe-area-inset-right, 0px)); }
+  }
+
+  @media print {
+    .toc-container { display: none; }
+    .site-footer { padding-bottom: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="../index.html">The <span>Open</span> Question</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">All Questions</a>
+      <a href="../about.html">About</a>
+      <a href="index.html#submit" class="nav-cta">Ask a Question</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a><span>/</span>
+    <a href="index.html">All Questions</a><span>/</span>
+    The Kingdom
+  </div>
+
+  <!-- Article title block -->
+  <div class="article-title-block">
+    <div class="article-meta">
+      <span class="tag">The Kingdom</span>
+    </div>
+    <h1>What is the kingdom of heaven?</h1>
+    <hr class="title-rule">
+  </div>
+
+  <div class="article-wrap">
+
+    <!-- The question -->
+    <div class="question-box" id="the-question">
+      <div class="q-label">The Question</div>
+      <p>"People talk about 'the kingdom of heaven' all the time. Isn't that just heaven, where you go when you die? And is it the same thing as the kingdom of God?"</p>
+    </div>
+
+    <p>Many people think of heaven after we die. That is true but incomplete. Jesus spoke about the kingdom more than almost anything else and He spoke about it as something that had already arrived. His first recorded message was this:</p>
+
+    <blockquote>
+      <p>"The time is fulfilled, and the kingdom of God is at hand. Repent, and believe in the gospel."</p>
+      <span class="ref">Mark 1:15 (NKJV)</span>
+    </blockquote>
+
+    <div class="core-truth-box" id="core-truth">
+      <p class="lbl">Core truth</p>
+      <p>Whether the Bible says "kingdom of heaven" or "kingdom of God", it points to God's rule: wherever God is King and His will is done. In Jesus that rule has come near. Anyone can enter it by turning to Him and trusting Him and one day it will fill the whole earth.</p>
+    </div>
+
+
+    <h2 id="what-it-is">1. What It Is</h2>
+
+    <h3 id="heaven-or-god">Kingdom of heaven or kingdom of God?</h3>
+    <p>Matthew mostly says "kingdom of heaven". Mark, Luke and John say "kingdom of God". Christians who love the Bible read this in two ways.</p>
+
+    <div class="views">
+      <div class="view">
+        <p class="lbl">Same kingdom, two names</p>
+        <p>The Gospels often record the same saying with either phrase (Matthew 13:11; Mark 4:11; Luke 8:10). Matthew 19:23–24 uses both in back-to-back verses. Many Jewish readers said "heaven" as a respectful way of saying "God" (Daniel 4:26; Luke 15:18).</p>
+      </div>
+      <div class="view">
+        <p class="lbl">Two related ideas</p>
+        <p>Other teachers see a difference. For some, the kingdom of heaven is the place where God's throne is and the kingdom of God is His rule reaching out from there into our lives now (Psalm 103:19; Matthew 6:9–10). Others see the kingdom of heaven as the outward kingdom where good and bad grow together for now. The kingdom of God is then the inner reality of those who truly belong (Matthew 13:24–30; John 3:3).</p>
+      </div>
+    </div>
+
+    <div class="callout note">
+      <p class="lbl">Note: common ground</p>
+      <p>Both views agree on what matters most. God is King, His rule came near in Jesus and we enter by turning and trusting. The rest of this answer holds whichever view you take.</p>
+    </div>
+
+    <h3 id="what-a-kingdom-is">What a kingdom is</h3>
+    <p>A kingdom has a king, a people, a rule (his word and will) and a realm. When the Bible speaks of God's kingdom, it speaks above all of His reign: God actually ruling. Jesus explained it in the prayer He taught His followers:</p>
+
+    <blockquote>
+      <p><span class="poem">"Your kingdom come.</span><span class="poem">Your will be done</span><span class="poem">On earth as it is in heaven."</span></p>
+      <span class="ref">Matthew 6:10 (NKJV)</span>
+    </blockquote>
+
+    <p>The two lines say the same thing twice. Where God's will is done, there His kingdom is. And God already rules over everything: "The <span class="sc">Lord</span> has established His throne in heaven, And His kingdom rules over all" (Psalm 103:19). So the question is not whether God is King. It is whether we live under His rule.</p>
+
+
+    <h2 id="what-its-like">2. What It's Like</h2>
+
+    <h3 id="kingdoms-of-this-world">Not like the kingdoms of this world</h3>
+    <p>The kingdoms we know help us see what is different about God's kingdom.</p>
+
+    <div class="table-wrap stack">
+      <table>
+        <thead>
+          <tr><th scope="col"></th><th scope="col">Earthly kingdom</th><th scope="col">Democracy</th><th scope="col">Kingdom of heaven</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="lc">Who rules</td><td data-label="Earthly kingdom">A king, by birth or by force</td><td data-label="Democracy">Leaders the people choose</td><td data-label="Kingdom of heaven">God, as Creator and owner of all (Psalm 24:1)</td></tr>
+          <tr><td class="lc">Who answers to whom</td><td data-label="Earthly kingdom">People answer to the king</td><td data-label="Democracy">Leaders answer to the people</td><td data-label="Kingdom of heaven">People answer to the King, yet the King serves them (Mark 10:45)</td></tr>
+          <tr><td class="lc">How laws are made</td><td data-label="Earthly kingdom">The king decides</td><td data-label="Democracy">Representatives vote</td><td data-label="Kingdom of heaven">Given by the King (Isaiah 33:22)</td></tr>
+          <tr><td class="lc">How long it lasts</td><td data-label="Earthly kingdom">Until the next king</td><td data-label="Democracy">Until the next election</td><td data-label="Kingdom of heaven">For ever (Daniel 2:44; Luke 1:33)</td></tr>
+          <tr><td class="lc">How you belong</td><td data-label="Earthly kingdom">Born in the land</td><td data-label="Democracy">Born a citizen or naturalised</td><td data-label="Kingdom of heaven">Born again (John 3:3; Philippians 3:20)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The Bible tells its own story about this. When Israel asked Samuel for a king they said, "Now make us a king to judge us like all the nations" (1 Samuel 8:5). God told Samuel, "they have not rejected you, but they have rejected Me, that I should not reign over them" (1 Samuel 8:7).</p>
+    <p>Standing before Pilate, Jesus said, "My kingdom is not of this world" (John 18:36). It does not come <em>from</em> this world but it is very much <em>for</em> it.</p>
+
+    <div class="callout caution">
+      <p class="lbl">Caution</p>
+      <p>This is not a call to look down on earthly government. Paul writes that "the authorities that exist are appointed by God" (Romans 13:1). The contrast is about where <em>final</em> authority sits.</p>
+    </div>
+
+    <h3 id="king-who-serves">The King who serves</h3>
+    <p>Earthly rulers "lord it over" the people under them (Matthew 20:25). Jesus turned that upside down: "Yet it shall not be so among you; but whoever desires to become great among you, let him be your servant" (Matthew 20:26). Then He showed what He meant:</p>
+
+    <blockquote>
+      <p>"For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many."</p>
+      <span class="ref">Mark 10:45 (NKJV)</span>
+    </blockquote>
+
+    <p>Compare two kings. Nebuchadnezzar looked over his city and said, "Is not this great Babylon, that I have built for a royal dwelling by my mighty power and for the honor of my majesty?" (Daniel 4:30). Jesus rode into Jerusalem "Lowly, and sitting on a donkey" (Matthew 21:5).</p>
+
+    <div class="callout depth">
+      <p class="lbl">Going deeper</p>
+      <p>At the cross Jesus was crowned with thorns (John 19:2). Pilate's sign above Him read "JESUS OF NAZARETH, THE KING OF THE JEWS" (John 19:19). It was meant as mockery but it told the truth. This King wins by giving His life.</p>
+    </div>
+
+    <h3 id="pictures">What Jesus likens the kingdom to</h3>
+    <p>Jesus rarely gave the kingdom a definition. He gave pictures.</p>
+
+    <div class="table-wrap stack">
+      <table>
+        <thead>
+          <tr><th scope="col">Picture</th><th scope="col">Verses</th><th scope="col">What it shows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="lc">Mustard seed</td><td data-label="Verses">Matthew 13:31–32</td><td data-label="What it shows">It starts tiny and grows huge</td></tr>
+          <tr><td class="lc">Leaven (yeast)</td><td data-label="Verses">Matthew 13:33</td><td data-label="What it shows">It works out of sight and changes everything</td></tr>
+          <tr><td class="lc">Treasure and pearl</td><td data-label="Verses">Matthew 13:44–46</td><td data-label="What it shows">It is worth everything and people give all for it with joy</td></tr>
+          <tr><td class="lc">Sower and soils</td><td data-label="Verses">Matthew 13:3–9, 18–23</td><td data-label="What it shows">The same message lands differently in different hearts</td></tr>
+          <tr><td class="lc">Wheat and weeds</td><td data-label="Verses">Matthew 13:24–30, 36–43</td><td data-label="What it shows">Good and bad grow together now and God sorts them at the end</td></tr>
+          <tr><td class="lc">A little child</td><td data-label="Verses">Matthew 18:1–4</td><td data-label="What it shows">You enter it small, not great</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h2 id="when-and-how">3. When and How</h2>
+
+    <h3 id="now-and-to-come">Here now and still to come</h3>
+    <p>The kingdom is already here. When Jesus drove out evil He said, "But if I cast out demons by the Spirit of God, surely the kingdom of God has come upon you" (Matthew 12:28).</p>
+    <p>It is also still to come. That is why Jesus taught us to pray "Your kingdom come" (Matthew 6:10). The Bible ends with the whole world under the King:</p>
+
+    <blockquote>
+      <p>"The kingdoms of this world have become the kingdoms of our Lord and of His Christ, and He shall reign forever and ever!"</p>
+      <span class="ref">Revelation 11:15 (NKJV)</span>
+    </blockquote>
+
+    <div class="callout note">
+      <p class="lbl">Note</p>
+      <p>In Luke 17:21 the NKJV reads "the kingdom of God is within you" and its footnote gives "in your midst". Faithful translations are found with both readings. Jesus was speaking to Pharisees, so at the very least He meant that the King was standing in front of them.</p>
+    </div>
+
+    <h3 id="how-you-enter">How you enter</h3>
+    <p>Jesus made the way in plain.</p>
+    <ul class="enter-list">
+      <li><strong>Turn and trust.</strong> "Repent, and believe in the gospel." (Mark 1:15)</li>
+      <li><strong>A new start from God.</strong> "unless one is born again, he cannot see the kingdom of God." (John 3:3)</li>
+      <li><strong>Come as a child.</strong> "unless you are converted and become as little children, you will by no means enter the kingdom of heaven." (Matthew 18:3)</li>
+      <li><strong>God brings you in.</strong> "He has delivered us from the power of darkness and conveyed us into the kingdom of the Son of His love" (Colossians 1:13)</li>
+    </ul>
+    <p>Those who enter belong to a new country: "For our citizenship is in heaven" (Philippians 3:20).</p>
+
+    <h3 id="living-in-it">Living in it</h3>
+    <p>Once you are in, the King's rule starts to shape everyday life. Paul sums it up: "for the kingdom of God is not eating and drinking, but righteousness and peace and joy in the Holy Spirit" (Romans 14:17). It is not first about outward rules. It is right living with God and others, peace that holds when life does not and joy that the Holy Spirit gives.</p>
+
+    <div class="callout tip">
+      <p class="lbl">Practical tip</p>
+      <p>Jesus said, "But seek first the kingdom of God and His righteousness, and all these things shall be added to you" (Matthew 6:33). In context "all these things" are food and clothing (Matthew 6:25–32). This week pray Matthew 6:10 slowly each day and ask God where His will needs to be done in your life.</p>
+    </div>
+
+
+    <h2 id="reflection">4. Reflection</h2>
+    <ol class="reflection-list">
+      <li>What surprised you most about how the Bible describes the kingdom?</li>
+      <li>How would you explain the kingdom of heaven to a friend in your own words? <span class="reflection-ref">(Matthew 6:10)</span></li>
+      <li>How is Jesus' way of being King different from the rulers you know? <span class="reflection-ref">(Mark 10:45)</span></li>
+      <li>What does the Bible say it takes to enter the kingdom and what does that mean for you? <span class="reflection-ref">(Mark 1:15)</span></li>
+      <li>Where in your life would you most want God's will to be done?</li>
+    </ol>
+
+    <p>Want to learn further? Please see the <a href="https://biblefoundations.pages.dev/part-1.html">Bible Truth Foundations series, Part 1: New Life in Christ</a>.</p>
+    <p class="reflection-ref">All scripture quotations are taken from the New King James Version.</p>
+
+    <!-- Back link -->
+    <hr class="section-divider">
+    <a href="index.html" class="back-link">&larr; Back to all questions</a>
+
+  </div>
+</div>
+</main>
+
+<!-- Response section -->
+<section class="response-section">
+  <div class="container">
+    <h2>Leave a response</h2>
+    <p>Did this help? Have a follow-up question? Leave a response below. All submissions are read.</p>
+    <!-- TALLY FORM: replace the placeholder below with your Tally embed code from tally.so -->
+    <div class="tally-placeholder">
+      <strong>Leave a response</strong>
+      The response form is coming soon.
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">The Open Question</div>
+    <p>Honest answers to hard Bible questions. For everyone.</p>
+    <p><a href="../about.html">About</a> &nbsp;&middot;&nbsp; <a href="index.html">All Questions</a></p>
+    <p class="footer-sub">A Hiturn Media Group resource.</p>
+  </div>
+</footer>
+
+<nav class="toc-container" aria-label="Jump to section">
+  <div class="toc-menu" id="toc-menu">
+    <a href="#the-question">The Question</a>
+    <a href="#core-truth">Core Truth</a>
+    <a href="#heaven-or-god">Heaven or God?</a>
+    <a href="#what-a-kingdom-is">What a Kingdom Is</a>
+    <a href="#kingdoms-of-this-world">Kingdoms of This World</a>
+    <a href="#king-who-serves">The King Who Serves</a>
+    <a href="#pictures">What Jesus Likens It To</a>
+    <a href="#now-and-to-come">Here Now and Still to Come</a>
+    <a href="#how-you-enter">How You Enter</a>
+    <a href="#living-in-it">Living in It</a>
+    <a href="#reflection">Reflection</a>
+    <a href="#" class="toc-back-top">&#8593; Back to top</a>
+  </div>
+  <button type="button" class="toc-btn" id="toc-btn" aria-expanded="false" aria-controls="toc-menu">&#9776; Jump to section</button>
+</nav>
+
+<script>
+  (function () {
+    var btn = document.getElementById('toc-btn');
+    var menu = document.getElementById('toc-menu');
+    var box = document.querySelector('.toc-container');
+    function close() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function () {
+      btn.setAttribute('aria-expanded', String(menu.classList.toggle('open')));
+    });
+    document.addEventListener('click', function (e) { if (!box.contains(e.target)) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) { close(); btn.focus(); }
+    });
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (link.getAttribute('href') === '#') {
+          e.preventDefault();
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        }
+        close();
+      });
+    });
+  })();
+</script>
+</body>
+</html>
