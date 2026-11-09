@@ -68,6 +68,7 @@
   .part-btn[aria-expanded="true"] .part-chevron { transform: rotate(180deg); }
   .part-body { border: 2px solid #1F3864; border-top: none; border-radius: 0 0 4px 4px; padding: 16px; }
   .part-body h3 { margin-top: 24px; }
+  .minimise-btn { margin-top: 20px; }
   h2[id], div[id] { scroll-margin-top: 80px; }
   @media (min-width: 640px) { .part-body { padding: 20px 24px; } .part-btn { font-size: 17px; } }
 </style>
@@ -107,16 +108,29 @@
 
   <div class="article-wrap">
 
-    <p>Before the question, read the passage itself. Here is Acts 21:20 to 26, in the New King James Version, with nothing left out.</p>
-
     <div class="expand-row">
-      <button type="button" class="fold-btn" id="expand-all">Expand sections</button>
-      <button type="button" class="fold-btn" id="collapse-all">Minimise sections</button>
+      <button type="button" class="fold-btn" id="expand-all">Expand all</button>
+      <button type="button" class="fold-btn" id="collapse-all">Minimise all</button>
+    </div>
+
+      <!-- The question -->
+      <div class="question-box" id="the-question">
+        <div class="q-label">The Question</div>
+        <p>"In Acts 21, Paul seems to go back to keeping the law. He taught on grace and said the law cannot save you. When push came to shove, he came back to keeping it. So did Paul go back on his own grace teaching? If not, how do you explain this from sound biblical teaching?"</p>
+      </div>
+
+    <div class="sec" id="short-answer">
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="short-answer-body"><span class="part-btn-title">The Short Answer</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <div class="part-body" id="short-answer-body" hidden>
+      <p>Thank you for raising this. It is a fair question that deserves a careful answer. Acts 21 can look like a U-turn, so it is worth reading the passage below slowly and in order.</p>
+      <p><strong>In short:</strong> No. Paul did not go back on grace. The answer turns on a distinction. Being justified before God never comes through the works of the law. A Jewish practice is a different matter. In Acts 21 Paul took part in a Jewish custom to reassure Jewish believers. He did not make that custom a way to be right with God. The gospel he taught stayed the same. The plan also backfired. The chapter ends with Paul arrested in the temple. Along the way this answer takes the hardest objections head on. Numbers in square brackets point to the sources at the end.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="short-answer">Minimise</button>
+      </div>
     </div>
 
     <div class="sec" id="what-acts-says">
-      <button type="button" class="part-btn" aria-expanded="true" aria-controls="what-acts-says-body"><span class="part-btn-title">1. What Acts 21 Actually Says</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
-      <div class="part-body" id="what-acts-says-body">
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="what-acts-says-body"><span class="part-btn-title">1. What Acts 21 Actually Says</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <div class="part-body" id="what-acts-says-body" hidden>
 
       <blockquote>
         <p>And when they heard it, they glorified the Lord. And they said to him, "You see, brother, how many myriads of Jews there are who have believed, and they are all zealous for the law; <sup>21</sup>but they have been informed about you that you teach all the Jews who are among the Gentiles to forsake Moses, saying that they ought not to circumcise their children nor to walk according to the customs. <sup>22</sup>What then? The assembly must certainly meet, for they will hear that you have come. <sup>23</sup>Therefore do what we tell you: We have four men who have taken a vow. <sup>24</sup>Take them and be purified with them, and pay their expenses so that they may shave their heads, and that all may know that those things of which they were informed concerning you are nothing, but that you yourself also walk orderly and keep the law. <sup>25</sup>But concerning the Gentiles who believe, we have written and decided that they should observe no such thing, except that they should keep themselves from things offered to idols, from blood, from things strangled, and from sexual immorality." <sup>26</sup>Then Paul took the men, and the next day, having been purified with them, entered the temple to announce the expiration of the days of purification, at which time an offering should be made for each one of them.</p>
@@ -127,20 +141,88 @@
 
       <p>This decision goes back to Acts 15. The church wrote that it seemed good to the Holy Spirit and to the leaders who wrote it, "to lay upon you no greater burden than these necessary things" (Acts 15:28)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>. Acts 21 does not cancel that letter. It repeats it. The request is about Paul and about Jewish believers who keep their customs, not about Gentiles who are asked to be circumcised. Osborne says the letter's aim was practical: "The goal is not to hamstring the Gentiles but to promote harmony between Jews and Gentiles in the church."<sup class="cite"><a href="#src-2" title="Grant R. Osborne, Acts: Verse by Verse">[2]</a></sup></p>
 
-      <!-- The question -->
-      <div class="question-box" id="the-question">
-        <div class="q-label">The Question</div>
-        <p>"In Acts 21, Paul seems to go back to keeping the law. He taught on grace and said the law cannot save you. When push came to shove, he came back to keeping it. So did Paul go back on his own grace teaching? If not, how do you explain this from sound biblical teaching?"</p>
+
+
+        <button type="button" class="fold-btn minimise-btn" data-target="what-acts-says">Minimise</button>
       </div>
+    </div>
 
-      <p>Thank you for raising this. It is a fair question that deserves a careful answer. Acts 21 can look like a U-turn, so it is worth reading the passage above slowly and in order.</p>
+    <div class="sec" id="the-vow">
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="the-vow-body"><span class="part-btn-title">2. The Vow in the Temple</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <div class="part-body" id="the-vow-body" hidden>
 
-      <p><strong>In short:</strong> No. Paul did not go back on grace. The answer turns on a distinction. Being justified before God never comes through the works of the law. A Jewish practice is a different matter. In Acts 21 Paul took part in a Jewish custom to reassure Jewish believers. He did not make that custom a way to be right with God. The gospel he taught stayed the same. The plan also backfired. The chapter ends with Paul arrested in the temple. Along the way this answer takes the hardest objections head on. Numbers in square brackets point to the sources at the end.</p>
+      <p>Acts 18:18 tells us Paul had taken a vow earlier, at Cenchrea: "for he had taken a vow."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> The text does not name that vow. In Acts 21 four men had a vow on them. Paul was asked to purify himself with them and to pay their expenses (Acts 21:23–24).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
+
+      <p>Numbers 6 describes the Nazirite vow. A person kept from wine. No razor came upon the head during the days of the vow:</p>
+
+      <blockquote>
+        <p>"All the days of the vow of his separation no razor shall come upon his head."</p>
+        <span class="ref">Numbers 6:5</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
+      </blockquote>
+
+      <p>When the days were fulfilled, the vow ended with offerings: a male lamb for a burnt offering, a ewe lamb for a sin offering and a ram for a peace offering, with unleavened bread and grain and drink offerings (Numbers 6:13–15)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>.</p>
+
+      <p>Acts 21 does not say Paul took a vow himself. It says he was to purify himself with the four men and pay their expenses, which was a costly gesture. Gangel says the request was not "in the vow itself". It was "in the purification ceremony and in the payment of their expenses"<sup class="cite"><a href="#src-3" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[3]</a></sup>. Osborne says the suggestion aimed "to show the Jews of Jerusalem that Paul is still faithful to his Jewish tradition"<sup class="cite"><a href="#src-2" title="Grant R. Osborne, Acts: Verse by Verse">[2]</a></sup>. The Bible Knowledge Background Commentary says the act of purification "was clearly intended to assure those in Jerusalem that Paul was not opposed to the Law"<sup class="cite"><a href="#src-4" title="Lee Martin McDonald, Acts, in The Bible Knowledge Background Commentary: Acts–Philemon">[4]</a></sup>.</p>
+
+      <p>Stott puts the distinction plainly. Paul and James were "already agreed doctrinally (that salvation was by grace in Christ through faith)". The dispute concerned "culture, ceremony and tradition"<sup class="cite"><a href="#src-5" title="John Stott, The Message of Acts (The Bible Speaks Today)">[5]</a></sup>. The customs were kept. They were never treated as the way to be saved.</p>
+
+      <p>Acts 21:26 records the act itself. Paul "entered the temple to announce the expiration of the days of purification, at which time an offering should be made for each one of them."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
+
+      <h3>"Isn't this compromise?"</h3>
+
+      <p>It can look like it. Osborne is candid: "Whether this was a wise decision has long been debated, for it certainly did backfire."<sup class="cite"><a href="#src-2" title="Grant R. Osborne, Acts: Verse by Verse">[2]</a></sup>. Stott answers the charge directly. The solution Paul and James reached was "a concession in the area of practice", not the surrender of a doctrinal or moral principle<sup class="cite"><a href="#src-5" title="John Stott, The Message of Acts (The Bible Speaks Today)">[5]</a></sup>. Gangel is more sympathetic: "Perhaps the criticism is unjust since they faced a real problem"<sup class="cite"><a href="#src-3" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[3]</a></sup>. The honest answer has two parts. First, the gospel was not on the table in Acts 21. The Gentile question had been settled in Acts 15. The elders repeat that decision in verse 25. Second, Paul gave way on a custom. The result was trouble, not reconciliation. The plan ended in a riot in which Paul was seized on a charge that he had brought Greeks into the temple.<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> The chapter does not hide that cost. Readers differ on whether this was a mistake or a sincere act of love that went wrong.</p>
+
+      <h3>"Didn't the Spirit tell him not to go to Jerusalem?"</h3>
+
+      <p>Acts 21:4 says the disciples at Tyre "told Paul through the Spirit not to go up to Jerusalem."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> Later, Agabus warns him in words that describe what would happen there:</p>
+
+      <blockquote>
+        <p>"So shall the Jews at Jerusalem bind the man who owns this belt, and deliver him into the hands of the Gentiles."</p>
+        <span class="ref">Acts 21:11</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
+      </blockquote>
+
+      <p>Readers differ here. Some take Acts 21:4 as a clear instruction that Paul disobeyed. Others read the plea as the disciples' own application of a true warning. They see Paul choosing to go on. Paul's answer in verse 13 shows that he had counted the cost. Whichever reading you take, the vow in the temple is not the point where Paul turns from grace.</p>
+
+      <h3>"Doesn't Galatians 5:4 forbid this?"</h3>
+
+      <p>Galatians 5:4 is the sharpest verse on this question:</p>
+
+      <blockquote>
+        <p>"you who attempt to be justified by law; you have fallen from grace."</p>
+        <span class="ref">Galatians 5:4</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
+      </blockquote>
+
+      <p>Galatians 2:16 gives the principle: a man is not justified by the works of the law but by faith in Jesus Christ. The danger Paul names in verse 4 is trust. The question is what a person is trusting in to be made right with God. Paul's part in the vow in Jerusalem is not described as an attempt to be justified. The chapter gives no hint that he trusted the vow for his standing before God. A believer can keep a custom for the sake of other believers without trusting it to save. That is the line this page keeps returning to.</p>
+
+
+      <h3>"Doesn't the sin offering deny the cross?"</h3>
+
+      <p>Numbers 6:14 includes a sin offering in the close of the vow. The sacrifices of the law pointed forward to Christ. Hebrews says we are made holy "through the offering of the body of Jesus Christ once for all" (Hebrews 10:10).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
+
+      <h3>"Isn't this what Paul rebuked Peter for?"</h3>
+
+      <p>In Galatians 2 Paul did oppose Peter, because Peter withdrew from Gentile believers "fearing those who were of the circumcision" (Galatians 2:12).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> Paul's objection was to forcing Gentiles to live as Jews: "why do you compel Gentiles to live as Jews?" (Galatians 2:14).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> In Acts 21 no Gentile was asked to change anything. Paul's own practice was his choice.</p>
+
+      <h3>"What did Paul say about the visit later?"</h3>
+
+      <p>Years later, before Felix, Paul described the visit: "I came to bring alms and offerings to my nation". Some Jews from Asia "found me purified in the temple, neither with a mob nor with tumult" (Acts 24:17–18).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> He called it service to his nation, not a return to the law for salvation.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="the-vow">Minimise</button>
+      </div>
+    </div>
+
+    <div class="sec" id="the-word-law">
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="the-word-law-body"><span class="part-btn-title">3. What Does "the Law" Mean Here?</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <div class="part-body" id="the-word-law-body" hidden>
+
+      <p>The word for law here is <em>nomos</em>. Blue Letter Bible's concordance lists it for the law of Moses, as in Luke 2:22. It is also used for the law and the prophets as a whole, as in Matthew 22:40<sup class="cite"><a href="#src-6" title="Blue Letter Bible, Strong's Greek Lexicon G3551 nomos">[6]</a></sup>.</p>
+
+      <p>The Greek word can name the whole Law that Moses gave. Paul's letters go further. They separate keeping the law as a way to be right with God from keeping Jewish practices as a matter of daily life. Acts 21 sits on the side of custom. Galatians sits on the side of salvation. Seeing that line makes the chapter easier to read.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="the-word-law">Minimise</button>
       </div>
     </div>
 
     <div class="sec" id="gospel">
-      <button type="button" class="part-btn" aria-expanded="false" aria-controls="gospel-body"><span class="part-btn-title">2. The Gospel Paul Taught</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="gospel-body"><span class="part-btn-title">4. The Gospel Paul Taught</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
       <div class="part-body" id="gospel-body" hidden>
 
       <p>Paul's teaching on how a person is made right with God is clear. These three verses are the foundation for the whole question, in the New King James Version:</p>
@@ -161,21 +243,12 @@
       </blockquote>
 
       <p>The question turns on a distinction. Being justified before God is never by the works of the law. Jewish practices are a different matter. Paul could keep some of them as a Jew, as long as nobody, himself included, treated them as the means of being made right with God. So the question to ask is not "Did Paul keep a Jewish custom?" but "Did Paul treat that custom as necessary for salvation?"</p>
-      </div>
-    </div>
-
-    <div class="sec" id="the-word-law">
-      <button type="button" class="part-btn" aria-expanded="false" aria-controls="the-word-law-body"><span class="part-btn-title">3. What Does "the Law" Mean Here?</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
-      <div class="part-body" id="the-word-law-body" hidden>
-
-      <p>The word for law here is <em>nomos</em>. Blue Letter Bible's concordance lists it for the law of Moses, as in Luke 2:22. It is also used for the law and the prophets as a whole, as in Matthew 22:40<sup class="cite"><a href="#src-3" title="Blue Letter Bible, Strong's Greek Lexicon G3551 nomos">[3]</a></sup>.</p>
-
-      <p>The Greek word can name the whole Law that Moses gave. Paul's letters go further. They separate keeping the law as a way to be right with God from keeping Jewish practices as a matter of daily life. Acts 21 sits on the side of custom. Galatians sits on the side of salvation. Seeing that line makes the chapter easier to read.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="gospel">Minimise</button>
       </div>
     </div>
 
     <div class="sec" id="galatians-line">
-      <button type="button" class="part-btn" aria-expanded="false" aria-controls="galatians-line-body"><span class="part-btn-title">4. Paul's Firm Line in Galatians</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
+      <button type="button" class="part-btn" aria-expanded="false" aria-controls="galatians-line-body"><span class="part-btn-title">5. Paul's Firm Line in Galatians</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
       <div class="part-body" id="galatians-line-body" hidden>
 
       <p>Paul's firmest line appears in Galatians. He went up to Jerusalem with Titus, a Greek. The question was whether Titus had to be circumcised. Paul did not give way:</p>
@@ -216,68 +289,7 @@
       <p>His practice was to adapt to the people in front of him, among Jews under the law and among others outside it. His purpose is clear. He did not let customs or differences in customs get in the way of winning people to the gospel of grace. The custom could change. The gospel did not.</p>
 
       <p>So Paul could become like a Jew to reach Jews. He would not let circumcision become a requirement for Gentiles or a means of salvation. Those are two different things. The Acts 21 vow belongs to the first. The Galatian dispute belongs to the second.</p>
-      </div>
-    </div>
-
-    <div class="sec" id="the-vow">
-      <button type="button" class="part-btn" aria-expanded="false" aria-controls="the-vow-body"><span class="part-btn-title">5. The Vow in the Temple</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
-      <div class="part-body" id="the-vow-body" hidden>
-
-      <p>Acts 18:18 tells us Paul had taken a vow earlier, at Cenchrea: "for he had taken a vow."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> The text does not name that vow. In Acts 21 four men had a vow on them. Paul was asked to purify himself with them and to pay their expenses (Acts 21:23–24).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
-
-      <p>Numbers 6 describes the Nazirite vow. A person kept from wine. No razor came upon the head during the days of the vow:</p>
-
-      <blockquote>
-        <p>"All the days of the vow of his separation no razor shall come upon his head."</p>
-        <span class="ref">Numbers 6:5</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
-      </blockquote>
-
-      <p>When the days were fulfilled, the vow ended with offerings: a male lamb for a burnt offering, a ewe lamb for a sin offering and a ram for a peace offering, with unleavened bread and grain and drink offerings (Numbers 6:13–15)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>.</p>
-
-      <p>Acts 21 does not say Paul took a vow himself. It says he was to purify himself with the four men and pay their expenses, which was a costly gesture. Gangel says the request was not "in the vow itself". It was "in the purification ceremony and in the payment of their expenses"<sup class="cite"><a href="#src-4" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[4]</a></sup>. Osborne says the suggestion aimed "to show the Jews of Jerusalem that Paul is still faithful to his Jewish tradition"<sup class="cite"><a href="#src-2" title="Grant R. Osborne, Acts: Verse by Verse">[2]</a></sup>. The Bible Knowledge Background Commentary says the act of purification "was clearly intended to assure those in Jerusalem that Paul was not opposed to the Law"<sup class="cite"><a href="#src-5" title="Lee Martin McDonald, Acts, in The Bible Knowledge Background Commentary: Acts–Philemon">[5]</a></sup>.</p>
-
-      <p>Stott puts the distinction plainly. Paul and James were "already agreed doctrinally (that salvation was by grace in Christ through faith)". The dispute concerned "culture, ceremony and tradition"<sup class="cite"><a href="#src-6" title="John Stott, The Message of Acts (The Bible Speaks Today)">[6]</a></sup>. The customs were kept. They were never treated as the way to be saved.</p>
-
-      <p>Acts 21:26 records the act itself. Paul "entered the temple to announce the expiration of the days of purification, at which time an offering should be made for each one of them."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
-
-      <h3>"Isn't this compromise?"</h3>
-
-      <p>It can look like it. Osborne is candid: "Whether this was a wise decision has long been debated, for it certainly did backfire."<sup class="cite"><a href="#src-2" title="Grant R. Osborne, Acts: Verse by Verse">[2]</a></sup>. Stott answers the charge directly. The solution Paul and James reached was "a concession in the area of practice", not the surrender of a doctrinal or moral principle<sup class="cite"><a href="#src-6" title="John Stott, The Message of Acts (The Bible Speaks Today)">[6]</a></sup>. Gangel is more sympathetic: "Perhaps the criticism is unjust since they faced a real problem"<sup class="cite"><a href="#src-4" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[4]</a></sup>. The honest answer has two parts. First, the gospel was not on the table in Acts 21. The Gentile question had been settled in Acts 15. The elders repeat that decision in verse 25. Second, Paul gave way on a custom. The result was trouble, not reconciliation. The plan ended in a riot in which Paul was seized on a charge that he had brought Greeks into the temple.<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> The chapter does not hide that cost. Readers differ on whether this was a mistake or a sincere act of love that went wrong.</p>
-
-      <h3>"Didn't the Spirit tell him not to go to Jerusalem?"</h3>
-
-      <p>Acts 21:4 says the disciples at Tyre "told Paul through the Spirit not to go up to Jerusalem."<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> Later, Agabus warns him in words that describe what would happen there:</p>
-
-      <blockquote>
-        <p>"So shall the Jews at Jerusalem bind the man who owns this belt, and deliver him into the hands of the Gentiles."</p>
-        <span class="ref">Acts 21:11</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
-      </blockquote>
-
-      <p>Readers differ here. Some take Acts 21:4 as a clear instruction that Paul disobeyed. Others read the plea as the disciples' own application of a true warning. They see Paul choosing to go on. Paul's answer in verse 13 shows that he had counted the cost. Whichever reading you take, the vow in the temple is not the point where Paul turns from grace.</p>
-
-      <h3>"Doesn't Galatians 5:4 forbid this?"</h3>
-
-      <p>Galatians 5:4 is the sharpest verse on this question:</p>
-
-      <blockquote>
-        <p>"you who attempt to be justified by law; you have fallen from grace."</p>
-        <span class="ref">Galatians 5:4</span><sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>
-      </blockquote>
-
-      <p>Galatians 2:16 gives the principle: a man is not justified by the works of the law but by faith in Jesus Christ. The danger Paul names in verse 4 is trust. The question is what a person is trusting in to be made right with God. Paul's part in the vow in Jerusalem is not described as an attempt to be justified. The chapter gives no hint that he trusted the vow for his standing before God. A believer can keep a custom for the sake of other believers without trusting it to save. That is the line this page keeps returning to.</p>
-
-
-      <h3>"Doesn't the sin offering deny the cross?"</h3>
-
-      <p>Numbers 6:14 includes a sin offering in the close of the vow. The sacrifices of the law pointed forward to Christ. Hebrews says we are made holy "through the offering of the body of Jesus Christ once for all" (Hebrews 10:10).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup></p>
-
-      <h3>"Isn't this what Paul rebuked Peter for?"</h3>
-
-      <p>In Galatians 2 Paul did oppose Peter, because Peter withdrew from Gentile believers "fearing those who were of the circumcision" (Galatians 2:12).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> Paul's objection was to forcing Gentiles to live as Jews: "why do you compel Gentiles to live as Jews?" (Galatians 2:14).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> In Acts 21 no Gentile was asked to change anything. Paul's own practice was his choice.</p>
-
-      <h3>"What did Paul say about the visit later?"</h3>
-
-      <p>Years later, before Felix, Paul described the visit: "I came to bring alms and offerings to my nation". Some Jews from Asia "found me purified in the temple, neither with a mob nor with tumult" (Acts 24:17–18).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> He called it service to his nation, not a return to the law for salvation.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="galatians-line">Minimise</button>
       </div>
     </div>
 
@@ -287,7 +299,7 @@
 
       <p>Romans 14 gives the principle for matters of custom, where believers may differ. Paul writes that each should "be fully convinced in his own mind" (Romans 14:5)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>.</p>
 
-      <p>Colossians 2:16–17 calls the festivals, new moons and sabbaths "a shadow of things to come", with the substance found in Christ<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>. Gangel links the vow to Paul's own rule: "such behavior would not have violated Paul's principles of grace-living"<sup class="cite"><a href="#src-4" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[4]</a></sup>.</p>
+      <p>Colossians 2:16–17 calls the festivals, new moons and sabbaths "a shadow of things to come", with the substance found in Christ<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>. Gangel links the vow to Paul's own rule: "such behavior would not have violated Paul's principles of grace-living"<sup class="cite"><a href="#src-3" title="Kenneth O. Gangel, Holman New Testament Commentary: Acts">[3]</a></sup>.</p>
 
       <p>The lesson is not that believers should go back under the law. It is that customs can be given up or kept for love's sake. They are never to be placed where Christ belongs. Paul's call to freedom still holds: "Stand fast therefore in the liberty by which Christ has made us free" (Galatians 5:1)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup>.</p>
 
@@ -295,6 +307,7 @@
         <p class="lbl">Going deeper</p>
         <p>What would change if you held the customs you keep for the sake of others?</p>
       </div>
+        <button type="button" class="fold-btn minimise-btn" data-target="apply">Minimise</button>
       </div>
     </div>
 
@@ -302,7 +315,8 @@
       <button type="button" class="part-btn" aria-expanded="false" aria-controls="where-we-differ-body"><span class="part-btn-title">7. Where Sincere Christians Differ</span><span class="part-chevron" aria-hidden="true">&#9660;</span></button>
       <div class="part-body" id="where-we-differ-body" hidden>
 
-      <p>Christians differ on Acts 21. Some see Paul's part in the vow as a mistake. Others see it as a wise act of accommodation for Jewish believers. Both views take the text seriously. Stott observes that "commentators are not agreed about what James had in mind".<sup class="cite"><a href="#src-4" title="John R. W. Stott, The Message of Acts, The Bible Speaks Today">[4]</a></sup> Romans 14 asks each side to be fully convinced in their own mind (Romans 14:5)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> and not to judge the other (Romans 14:3, 10).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> That is a good place to start when the views differ.</p>
+      <p>Christians differ on Acts 21. Some see Paul's part in the vow as a mistake. Others see it as a wise act of accommodation for Jewish believers. Both views take the text seriously. Stott observes that "commentators are not agreed about what James had in mind".<sup class="cite"><a href="#src-3" title="John R. W. Stott, The Message of Acts, The Bible Speaks Today">[3]</a></sup> Romans 14 asks each side to be fully convinced in their own mind (Romans 14:5)<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> and not to judge the other (Romans 14:3, 10).<sup class="cite"><a href="#src-1" title="Holy Bible, New King James Version, via BibleGateway">[1]</a></sup> That is a good place to start when the views differ.</p>
+        <button type="button" class="fold-btn minimise-btn" data-target="where-we-differ">Minimise</button>
       </div>
     </div>
 
@@ -314,6 +328,7 @@
         <div class="a-label">Plain Response</div>
         <p>"No, Paul did not go back on grace. Nobody is justified by the works of the law (Romans 3:28; Galatians 2:16). In Acts 21 he joined a Jewish purification to show Jewish believers that he was not against their customs. His own rule was to become "as a Jew" to win Jews (1 Corinthians 9:20). He did not treat that custom as a way to be right with God. The elders reaffirmed that Gentile believers were not to be placed under the law (Acts 21:25). Paul had already held firm that Titus was not compelled to be circumcised (Galatians 2:3). The plan did not work. Paul was arrested in the temple. Paul gave way in custom for the sake of others. He never gave way on how people are made right with God (Galatians 2:5; 5:4)."</p>
       </div>
+        <button type="button" class="fold-btn minimise-btn" data-target="say-it-simply">Minimise</button>
       </div>
     </div>
 
@@ -345,6 +360,7 @@
         </tbody>
       </table>
       </div>
+        <button type="button" class="fold-btn minimise-btn" data-target="key-scriptures">Minimise</button>
       </div>
     </div>
 
@@ -355,37 +371,38 @@
       <p>Numbers in square brackets in the text match this list. All Scripture is quoted from the New King James Version unless otherwise stated. Sources were checked on 9 November 2026.</p>
 
       <ol class="sources-list">
-        <li id="src-1">
+      <li id="src-1">
           <a href="https://www.biblegateway.com/passage/?search=Acts+21%3A17-26&amp;version=NKJV" target="_blank" rel="noopener">Holy Bible, New King James Version (NKJV)</a>
           <span class="src-site">biblegateway.com (text &copy; Thomas Nelson, 1982)</span>
           <span class="src-use">All Scripture quotations and references.</span>
         </li>
-        <li id="src-2">
+      <li id="src-2">
           <strong>Grant R. Osborne, <em>Acts: Verse by Verse</em>, Osborne New Testament Commentaries (Lexham Press, 2019).</strong>
           <span class="src-site">Commentary on Acts 21:17–26.</span>
           <span class="src-use">The elders' suggestion as a sign of faithfulness to Jewish tradition; the verdict that the decision was debated and "certainly did backfire".</span>
         </li>
-        <li id="src-3">
-          <a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" rel="noopener">Strong's Greek Lexicon: <em>nomos</em> (G3551)</a>
-          <span class="src-site">blueletterbible.org</span>
-          <span class="src-use">The word <em>nomos</em> and its use in the Gospels, including the law of Moses (Luke 2:22) and the law and the prophets (Matthew 22:40).</span>
-        </li>
-        <li id="src-4">
+      <li id="src-3">
           <strong>Kenneth O. Gangel, <em>Acts</em>, Holman New Testament Commentary (Broadman &amp; Holman, 1998).</strong>
           <span class="src-site">Commentary on Acts 21:17–26.</span>
           <span class="src-use">The request concerned the purification and expenses rather than the vow itself; the link to 1 Corinthians 9:20–21; the criticism of Paul as possibly unjust.</span>
         </li>
-        <li id="src-5">
+      <li id="src-4">
           <strong>Lee Martin McDonald, "Acts", in <em>The Bible Knowledge Background Commentary: Acts–Philemon</em>, general editor Craig A. Evans (David C Cook, 2003).</strong>
           <span class="src-site">Commentary on Acts 21:17–26.</span>
           <span class="src-use">The purpose of the purification. Paul's customs were kept without being imposed on Gentiles.</span>
         </li>
-        <li id="src-6">
+      <li id="src-5">
           <strong>John R. W. Stott, <em>The Message of Acts</em>, The Bible Speaks Today (InterVarsity Press, 1990).</strong>
           <span class="src-site">Commentary on Acts 21:18–26.</span>
           <span class="src-use">Paul and James agreed on salvation by grace; the dispute was over culture and practice; the solution was a concession in practice, not a compromise of principle.</span>
         </li>
-      </ol>
+      <li id="src-6">
+          <a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" rel="noopener">Strong's Greek Lexicon: <em>nomos</em> (G3551)</a>
+          <span class="src-site">blueletterbible.org</span>
+          <span class="src-use">The word <em>nomos</em> and its use in the Gospels, including the law of Moses (Luke 2:22) and the law and the prophets (Matthew 22:40).</span>
+        </li>
+    </ol>
+        <button type="button" class="fold-btn minimise-btn" data-target="sources">Minimise</button>
       </div>
     </div>
 
@@ -423,11 +440,12 @@
 <nav class="toc-container" aria-label="Jump to section">
   <div class="toc-menu" id="toc-menu">
     <a href="#the-question">The Question</a>
-    <a href="#gospel">The Gospel Paul Taught</a>
+    <a href="#short-answer">The Short Answer</a>
     <a href="#what-acts-says">What Acts 21 Says</a>
-    <a href="#the-word-law">What "the Law" Means</a>
-    <a href="#galatians-line">Paul's Firm Line</a>
     <a href="#the-vow">The Vow in the Temple</a>
+    <a href="#the-word-law">What "the Law" Means</a>
+    <a href="#gospel">The Gospel Paul Taught</a>
+    <a href="#galatians-line">Paul's Firm Line</a>
     <a href="#apply">What It Means Today</a>
     <a href="#where-we-differ">Where Christians Differ</a>
     <a href="#say-it-simply">How to Say It Simply</a>
@@ -471,17 +489,25 @@
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       if (open) { body.removeAttribute('hidden'); } else { body.setAttribute('hidden', ''); }
     }
+    function btnFor(id) { return document.querySelector('.part-btn[aria-controls="' + id + '-body"]'); }
     document.querySelectorAll('.part-btn').forEach(function (btn) {
       btn.addEventListener('click', function () { setOpen(btn, btn.getAttribute('aria-expanded') !== 'true'); });
     });
+    document.querySelectorAll('.minimise-btn').forEach(function (mb) {
+      mb.addEventListener('click', function () {
+        var id = mb.getAttribute('data-target');
+        var btn = btnFor(id);
+        setOpen(btn, false);
+        var sec = document.getElementById(id);
+        if (sec) { sec.scrollIntoView({ block: 'start' }); }
+      });
+    });
     function openFromHash() {
       var id = location.hash.slice(1);
-      var sec = id && document.getElementById(id);
-      var btn = sec && sec.querySelector('.part-btn');
+      var btn = id && btnFor(id);
       if (btn) { setOpen(btn, true); }
     }
     window.addEventListener('hashchange', openFromHash);
-    openFromHash();
     document.getElementById('expand-all').addEventListener('click', function () {
       document.querySelectorAll('.part-btn').forEach(function (b) { setOpen(b, true); });
     });
