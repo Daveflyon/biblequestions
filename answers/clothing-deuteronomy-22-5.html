@@ -56,6 +56,7 @@
     .site-footer { padding-bottom: 32px; }
   }
 </style>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 </head>
 <body>
 
@@ -70,6 +71,10 @@
     </nav>
   </div>
 </header>
+<div class="site-search"><div id="search"></div></div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>new PagefindUI({ element: "#search", showSubResults: true });</script>
+
 
 <main>
 <div class="container">

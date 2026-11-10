@@ -471,3 +471,5 @@ tbody td.lc { background: #f2f2f2; font-weight: 700; }
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
+
+.site-search { max-width: 40rem; margin: 1rem auto; padding: 0 1rem; }
