@@ -34,7 +34,7 @@
     const category = el('select', { id: p + 'cat', name: 'category', required: '' }, ...CATEGORIES.map((c) => el('option', { value: c }, c)));
     const text = el('textarea', { id: p + 'text', name: 'content', rows: '6', maxlength: isQ ? '2000' : '1500', required: '' });
     const name = el('input', { id: p + 'name', name: 'name', type: 'text', maxlength: '80', autocomplete: 'name' });
-    const email = el('input', { id: p + 'email', name: 'email', type: 'email', maxlength: '254', autocomplete: 'email' });
+    const email = el('input', { id: p + 'email', name: 'email', type: 'email', maxlength: '254', autocomplete: 'email', required: '' });
     const consent = el('input', { id: p + 'consent', type: 'checkbox' });
     const status = el('p', { class: 'bq-status', role: 'status' });
     const widget = el('div', { class: 'bq-turnstile' });
@@ -47,7 +47,7 @@
       ...(isQ ? [field(p + 'cat', 'Topic', category)] : []),
       field(p + 'text', isQ ? 'Your question' : 'Your response', text),
       field(p + 'name', 'Your name (optional)', name),
-      field(p + 'email', 'Your email (optional)', email, 'Only used to reply to you. Never shown.'),
+      field(p + 'email', 'Your email', email, 'Needed so we can reply and keep track of what you sent. Never shown.'),
       ...(isQ ? [] : [el('label', { class: 'bq-check', for: p + 'consent' }, consent, ' Show the name I entered next to my response.')]),
       el('p', { class: 'bq-note' }, 'Please do not include personal details such as your address or phone number. Everything is read before anything appears on this site. ', el('a', { href: '/privacy.html' }, 'How we handle your information')),
       widget,
@@ -76,7 +76,7 @@
           host.replaceChildren(el('p', { class: 'bq-done', role: 'status' }, isQ ? 'Thank you. Your question has been received and will be read before anything is published.' : 'Thank you. Your response has been received and will be read before it appears.'));
           return;
         }
-        say(r.status === 400 ? 'Please check the form. A message is needed and your email must look right.' : r.status === 403 ? 'The check did not pass. Please try again.' : 'Something went wrong. Please try again later.');
+        say(r.status === 400 ? 'Please check the form. A message and a valid email are needed.' : r.status === 403 ? 'The check did not pass. Please try again.' : 'Something went wrong. Please try again later.');
       } catch {
         say('Could not send. Check your connection and try again.');
       }
