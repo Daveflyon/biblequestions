@@ -90,7 +90,7 @@
 </header>
 <div class="site-search"><div id="search"></div></div>
 <script src="/pagefind/pagefind-ui.js"></script>
-<script>new PagefindUI({ element: "#search", showSubResults: true });</script>
+<script src="/js/search.js"></script>
 
 
 <main>
@@ -499,71 +499,9 @@
   <button type="button" class="toc-btn" id="toc-btn" aria-expanded="false" aria-controls="toc-menu">&#9776; Jump to section</button>
 </nav>
 
-<script>
-  (function () {
-    var btn = document.getElementById('toc-btn');
-    var menu = document.getElementById('toc-menu');
-    var box = document.querySelector('.toc-container');
-    function close() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
-    btn.addEventListener('click', function () {
-      btn.setAttribute('aria-expanded', String(menu.classList.toggle('open')));
-    });
-    document.addEventListener('click', function (e) { if (!box.contains(e.target)) close(); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && menu.classList.contains('open')) { close(); btn.focus(); }
-    });
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (link.getAttribute('href') === '#') {
-          e.preventDefault();
-          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-        }
-        close();
-      });
-    });
-  })();
-</script>
+<script src="/js/toc.js" defer></script>
 
-<script>
-  (function () {
-    function setOpen(btn, open) {
-      var body = document.getElementById(btn.getAttribute('aria-controls'));
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (open) { body.removeAttribute('hidden'); } else { body.setAttribute('hidden', ''); }
-    }
-    function btnFor(id) { return document.querySelector('.part-btn[aria-controls="' + id + '-body"]'); }
-    document.querySelectorAll('.part-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () { setOpen(btn, btn.getAttribute('aria-expanded') !== 'true'); });
-    });
-    document.querySelectorAll('.minimise-btn').forEach(function (mb) {
-      mb.addEventListener('click', function () {
-        var id = mb.getAttribute('data-target');
-        var btn = btnFor(id);
-        setOpen(btn, false);
-        var sec = document.getElementById(id);
-        if (sec) { sec.scrollIntoView({ block: 'start' }); }
-      });
-    });
-    function openFromHash() {
-      var raw = location.hash.slice(1);
-      var target = raw && document.getElementById(decodeURIComponent(raw));
-      if (!target) { return; }
-      var part = target.closest('.part-body');
-      var btn = part ? btnFor(part.id.replace(/-body$/, '')) : btnFor(target.id);
-      if (btn) { setOpen(btn, true); }
-      target.scrollIntoView({ block: 'start' });
-    }
-    window.addEventListener('hashchange', openFromHash);
-    openFromHash();
-    document.getElementById('expand-all').addEventListener('click', function () {
-      document.querySelectorAll('.part-btn').forEach(function (b) { setOpen(b, true); });
-    });
-    document.getElementById('collapse-all').addEventListener('click', function () {
-      document.querySelectorAll('.part-btn').forEach(function (b) { setOpen(b, false); });
-    });
-  })();
-</script>
+<script src="/js/parts.js" defer></script>
 <script src="/js/forms.js" defer></script>
 </body>
 </html>
